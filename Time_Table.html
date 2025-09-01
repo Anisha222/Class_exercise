@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Time Table</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  th, td {
+    border: 1px solid #d32f2f; /* Darker red for borders */
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  th {
+    background-color: #d4d0d0; /* Lighter red for header background */
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  td {
+    background-color: #c9c4c4;
+  }
+
+  /* Color coding for specific subjects/cells */
+  .wtd {
+    background-color: #bbdefb; /* Light Blue */
+    font-weight: bold;
+  }
+  .linux {
+    background-color: #c8e6c9; /* Light Green */
+    font-weight: bold;
+  }
+  .python {
+    background-color: #ffcdd2; /* Light Red/Pink */
+    font-weight: bold;
+  }
+  .active-directory {
+    background-color: #fff9c4; /* Light Yellow */
+    font-weight: bold;
+  }
+
+  /* Day row styling */
+  .day-header {
+    background-color: #d1cccc;
+    font-weight: bold;
+  }
+  h1 {
+    color: red;
+    text-align: center;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<h1>Time Table</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Days/Time</th>
+      <th>08:00 - 10:00</th>
+      <th>10:00 - 12:00</th>
+      <th>13:00 - 15:00</th>
+      <th>15:00 - 17:00</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="day-header">Monday</td>
+      <td class="wtd">WTD</td>
+      <td class="active-directory" rowspan="5">Active Directory</td>
+      <td class="python" colspan="2" rowspan="2">Python</td>
+    </tr>
+    <tr>
+      <td class="day-header">Tuesday</td>
+      <td class="linux">Linux</td>
+    </tr>
+    <tr>
+      <td class="day-header">Wednesday</td>
+      <td class="python">Python</td>
+      <td class="wtd">WTD</td>
+      <td class="linux">Linux</td>
+    </tr>
+    <tr>
+      <td class="day-header">Thursday</td>
+      <td class="wtd" rowspan="2">WTD</td>
+      <td class="linux" colspan="2">Linux</td>
+    </tr>
+    <tr>
+      <td class="day-header">Friday</td>
+      <td class="wtd">WTD</td>
+      <td class="linux">Linux</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
